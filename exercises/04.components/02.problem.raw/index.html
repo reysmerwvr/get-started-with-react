@@ -8,16 +8,14 @@
 
 			const rootElement = document.getElementById('root')
 
-			// NOTE: this is NOT being used as a component. We're not quite there yet.
 			function message({ children }) {
 				return <div className="message">{children}</div>
 			}
 
 			const element = (
 				<div className="container">
-					{/* 🐨 change these function calls to React.createElement API calls */}
-					{message({ children: 'Hello World' })}
-					{message({ children: 'Goodbye World' })}
+					{React.createElement(message, { children: 'Hello World' })}
+					{React.createElement(message, { children: 'Goodbye World' })}
 				</div>
 			)
 
